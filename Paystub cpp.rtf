@@ -1,0 +1,1178 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf400
+{\fonttbl\f0\fnil\fcharset0 Menlo-Italic;\f1\fswiss\fcharset0 Helvetica;\f2\fnil\fcharset0 Menlo-Regular;
+\f3\fnil\fcharset0 Menlo-Bold;}
+{\colortbl;\red255\green255\blue255;\red83\green101\blue121;\red255\green255\blue255;\red100\green56\blue32;
+\red196\green26\blue22;\red0\green0\blue0;\red155\green35\blue147;\red28\green0\blue207;}
+{\*\expandedcolortbl;;\csgenericrgb\c32401\c39745\c47507;\csgenericrgb\c100000\c100000\c100000;\csgenericrgb\c39147\c22031\c12446;
+\csgenericrgb\c77000\c10200\c8600;\csgenericrgb\c0\c0\c0;\csgenericrgb\c60759\c13753\c57628;\csgenericrgb\c11000\c0\c81000;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab593
+\pard\tx593\pardeftab593\pardirnatural\partightenfactor0
+
+\f0\i\fs24 \cf2 \cb3 //
+\f1\i0 \cf0 \
+
+\f0\i \cf2 //  Paystub.cpp
+\f1\i0 \cf0 \
+
+\f0\i \cf2 //  C250 Final Project - Payroll YYL
+\f1\i0 \cf0 \
+
+\f0\i \cf2 //
+\f1\i0 \cf0 \
+
+\f0\i \cf2 //  Created by Yan Yan Ley on 4/2/19.
+\f1\i0 \cf0 \
+
+\f0\i \cf2 //  Copyright \'a9 2019 Yan Yan Ley. All rights reserved.
+\f1\i0 \cf0 \
+
+\f0\i \cf2 //
+\f1\i0 \cf0 \
+
+\f2 \cf4 #include \cf5 <iostream>
+\f1 \cf0 \
+
+\f2 \cf4 #include \cf5 <fstream>
+\f1 \cf0 \
+
+\f2 \cf4 #include \cf5 <sstream>
+\f1 \cf0 \
+
+\f2 \cf4 #include \cf5 <iomanip>
+\f1 \cf0 \
+
+\f2 \cf4 #include \cf5 "Paystub.hpp"
+\f1 \cf0 \
+\
+
+\f0\i \cf2 //implement PAYROLL class setters
+\f1\i0 \cf0 \
+
+\f2 \cf6 string PAYROLL::set_EmployeeLastName()\{
+\f1 \cf0 \
+
+\f2 \cf6     
+\f3\b \cf7 return
+\f2\b0 \cf6  EmployeeLastName;
+\f1 \cf0 \
+
+\f2 \cf6 \}
+\f1 \cf0 \
+
+\f2 \cf6 string PAYROLL::set_EmployeeFirstName()\{
+\f1 \cf0 \
+
+\f2 \cf6     
+\f3\b \cf7 return
+\f2\b0 \cf6  EmployeeFirstName;
+\f1 \cf0 \
+
+\f2 \cf6 \}
+\f1 \cf0 \
+
+\f2 \cf6 string PAYROLL::set_EmployeeID()\{
+\f1 \cf0 \
+
+\f2 \cf6     
+\f3\b \cf7 return
+\f2\b0 \cf6  EmployeeID;
+\f1 \cf0 \
+
+\f2 \cf6 \}
+\f1 \cf0 \
+
+\f2 \cf6 string PAYROLL::set_Address1()\{
+\f1 \cf0 \
+
+\f2 \cf6     
+\f3\b \cf7 return
+\f2\b0 \cf6  Address1;
+\f1 \cf0 \
+
+\f2 \cf6 \}
+\f1 \cf0 \
+
+\f2 \cf6 string PAYROLL::set_Address2()\{
+\f1 \cf0 \
+
+\f2 \cf6     
+\f3\b \cf7 return
+\f2\b0 \cf6  Address2;
+\f1 \cf0 \
+
+\f2 \cf6 \}
+\f1 \cf0 \
+
+\f2 \cf6 string PAYROLL::set_Phone()\{
+\f1 \cf0 \
+
+\f2 \cf6     
+\f3\b \cf7 return
+\f2\b0 \cf6  Phone;
+\f1 \cf0 \
+
+\f2 \cf6 \}
+\f1 \cf0 \
+
+\f3\b \cf7 float
+\f2\b0 \cf6  PAYROLL::set_PayRate()\{
+\f1 \cf0 \
+
+\f2 \cf6     
+\f3\b \cf7 return
+\f2\b0 \cf6  PayRate;
+\f1 \cf0 \
+
+\f2 \cf6 \}
+\f1 \cf0 \
+
+\f2 \cf6 string PAYROLL::set_PayStartDate()\{
+\f1 \cf0 \
+
+\f2 \cf6     
+\f3\b \cf7 return
+\f2\b0 \cf6  PayStartDate;
+\f1 \cf0 \
+
+\f2 \cf6 \}
+\f1 \cf0 \
+
+\f2 \cf6 string PAYROLL::set_PayEndDate()\{
+\f1 \cf0 \
+
+\f2 \cf6     
+\f3\b \cf7 return
+\f2\b0 \cf6  PayEndDate;
+\f1 \cf0 \
+
+\f2 \cf6 \}
+\f1 \cf0 \
+
+\f3\b \cf7 float
+\f2\b0 \cf6  PAYROLL::set_HoursWorked()\{
+\f1 \cf0 \
+
+\f2 \cf6     
+\f3\b \cf7 return
+\f2\b0 \cf6  HoursWorked;
+\f1 \cf0 \
+
+\f2 \cf6 \}
+\f1 \cf0 \
+
+\f3\b \cf7 float
+\f2\b0 \cf6  PAYROLL::set_OverTimeHoursWorked()\{
+\f1 \cf0 \
+
+\f2 \cf6     
+\f3\b \cf7 return
+\f2\b0 \cf6  OverTimeHoursWorked;
+\f1 \cf0 \
+
+\f2 \cf6 \}
+\f1 \cf0 \
+
+\f3\b \cf7 float
+\f2\b0 \cf6  PAYROLL::set_VacationHoursUsed()\{
+\f1 \cf0 \
+
+\f2 \cf6     
+\f3\b \cf7 return
+\f2\b0 \cf6  VacationHoursUsed;
+\f1 \cf0 \
+
+\f2 \cf6 \}
+\f1 \cf0 \
+\
+
+\f0\i \cf2 //implement PAYROLL class getters
+\f1\i0 \cf0 \
+
+\f2 \cf6 string PAYROLL::get_EmployeeLastName()\{
+\f1 \cf0 \
+
+\f2 \cf6     
+\f3\b \cf7 return
+\f2\b0 \cf6  EmployeeLastName;
+\f1 \cf0 \
+
+\f2 \cf6 \}
+\f1 \cf0 \
+
+\f2 \cf6 string PAYROLL::get_EmployeeFirstName()\{
+\f1 \cf0 \
+
+\f2 \cf6     
+\f3\b \cf7 return
+\f2\b0 \cf6  EmployeeFirstName;
+\f1 \cf0 \
+
+\f2 \cf6 \}
+\f1 \cf0 \
+
+\f2 \cf6 string PAYROLL::get_EmployeeID()\{
+\f1 \cf0 \
+
+\f2 \cf6     
+\f3\b \cf7 return
+\f2\b0 \cf6  EmployeeID;
+\f1 \cf0 \
+
+\f2 \cf6 \}
+\f1 \cf0 \
+
+\f2 \cf6 string PAYROLL::get_Address1()\{
+\f1 \cf0 \
+
+\f2 \cf6     
+\f3\b \cf7 return
+\f2\b0 \cf6  Address1;
+\f1 \cf0 \
+
+\f2 \cf6 \}
+\f1 \cf0 \
+
+\f2 \cf6 string PAYROLL::get_Address2()\{
+\f1 \cf0 \
+
+\f2 \cf6     
+\f3\b \cf7 return
+\f2\b0 \cf6  Address2;
+\f1 \cf0 \
+
+\f2 \cf6 \}
+\f1 \cf0 \
+
+\f2 \cf6 string PAYROLL::get_Phone()\{
+\f1 \cf0 \
+
+\f2 \cf6     
+\f3\b \cf7 return
+\f2\b0 \cf6  Phone;
+\f1 \cf0 \
+
+\f2 \cf6 \}
+\f1 \cf0 \
+
+\f3\b \cf7 float
+\f2\b0 \cf6  PAYROLL::get_PayRate()\{
+\f1 \cf0 \
+
+\f2 \cf6     
+\f3\b \cf7 return
+\f2\b0 \cf6  PayRate;
+\f1 \cf0 \
+
+\f2 \cf6 \}
+\f1 \cf0 \
+
+\f2 \cf6 string PAYROLL::get_PayStartDate()\{
+\f1 \cf0 \
+
+\f2 \cf6     
+\f3\b \cf7 return
+\f2\b0 \cf6  PayStartDate;
+\f1 \cf0 \
+
+\f2 \cf6 \}
+\f1 \cf0 \
+
+\f2 \cf6 string PAYROLL::get_PayEndDate()\{
+\f1 \cf0 \
+
+\f2 \cf6     
+\f3\b \cf7 return
+\f2\b0 \cf6  PayEndDate;
+\f1 \cf0 \
+
+\f2 \cf6 \}
+\f1 \cf0 \
+
+\f3\b \cf7 float
+\f2\b0 \cf6  PAYROLL::get_HoursWorked()\{
+\f1 \cf0 \
+
+\f2 \cf6     
+\f3\b \cf7 return
+\f2\b0 \cf6  HoursWorked;
+\f1 \cf0 \
+
+\f2 \cf6 \}
+\f1 \cf0 \
+
+\f3\b \cf7 float
+\f2\b0 \cf6  PAYROLL::get_OverTimeHoursWorked()\{
+\f1 \cf0 \
+
+\f2 \cf6     
+\f3\b \cf7 return
+\f2\b0 \cf6  OverTimeHoursWorked;
+\f1 \cf0 \
+
+\f2 \cf6 \}
+\f1 \cf0 \
+
+\f3\b \cf7 float
+\f2\b0 \cf6  PAYROLL::get_VacationHoursUsed()\{
+\f1 \cf0 \
+
+\f2 \cf6     
+\f3\b \cf7 return
+\f2\b0 \cf6  VacationHoursUsed;
+\f1 \cf0 \
+
+\f2 \cf6 \}
+\f1 \cf0 \
+
+\f3\b \cf7 float
+\f2\b0 \cf6  PAYROLL::get_GrossPay()\{
+\f1 \cf0 \
+
+\f2 \cf6     GrossPay = GrossPayCalc(PayRate, HoursWorked, VacationHoursUsed, OverTimeHoursWorked);
+\f1 \cf0 \
+
+\f2 \cf6     
+\f3\b \cf7 return
+\f2\b0 \cf6  GrossPay;
+\f1 \cf0 \
+
+\f2 \cf6 \}
+\f1 \cf0 \
+
+\f3\b \cf7 float
+\f2\b0 \cf6  PAYROLL::get_FederalTax()\{
+\f1 \cf0 \
+
+\f2 \cf6     FederalTax = FederalTaxCalc(PayRate, HoursWorked, VacationHoursUsed, OverTimeHoursWorked);
+\f1 \cf0 \
+
+\f2 \cf6     
+\f3\b \cf7 return
+\f2\b0 \cf6  FederalTax;
+\f1 \cf0 \
+
+\f2 \cf6 \}
+\f1 \cf0 \
+
+\f3\b \cf7 float
+\f2\b0 \cf6  PAYROLL::get_StateTax()\{
+\f1 \cf0 \
+
+\f2 \cf6     StateTax = StateTaxCalc(PayRate, HoursWorked, VacationHoursUsed, OverTimeHoursWorked);
+\f1 \cf0 \
+
+\f2 \cf6     
+\f3\b \cf7 return
+\f2\b0 \cf6  StateTax;
+\f1 \cf0 \
+
+\f2 \cf6 \}
+\f1 \cf0 \
+
+\f3\b \cf7 float
+\f2\b0 \cf6  PAYROLL::get_NetPay()\{
+\f1 \cf0 \
+
+\f2 \cf6     NetPay = NetPayCalc(GrossPay, FederalTax, StateTax);
+\f1 \cf0 \
+
+\f2 \cf6     
+\f3\b \cf7 return
+\f2\b0 \cf6  NetPay;
+\f1 \cf0 \
+
+\f2 \cf6 \}
+\f1 \cf0 \
+\
+
+\f0\i \cf2 //implement PAYROLL class methods
+\f1\i0 \cf0 \
+
+\f3\b \cf7 float
+\f2\b0 \cf6  PAYROLL::GrossPayCalc(
+\f3\b \cf7 float
+\f2\b0 \cf6  PayRate, 
+\f3\b \cf7 float
+\f2\b0 \cf6  HoursWorked, 
+\f3\b \cf7 float
+\f2\b0 \cf6  VacationHoursUsed, 
+\f3\b \cf7 float
+\f2\b0 \cf6  OverTimeHoursWorked)
+\f1 \cf0 \
+
+\f2 \cf6 \{
+\f1 \cf0 \
+
+\f2 \cf6     
+\f3\b \cf7 float
+\f2\b0 \cf6  GrossPayCalc;
+\f1 \cf0 \
+
+\f2 \cf6     GrossPayCalc = (PayRate*(HoursWorked+VacationHoursUsed)) + (PayRate*\cf8 1.5\cf6 *OverTimeHoursWorked);
+\f1 \cf0 \
+
+\f2 \cf6     
+\f3\b \cf7 return
+\f2\b0 \cf6  GrossPayCalc;
+\f1 \cf0 \
+
+\f2 \cf6 \}
+\f1 \cf0 \
+
+\f3\b \cf7 float
+\f2\b0 \cf6  PAYROLL::FederalTaxCalc(
+\f3\b \cf7 float
+\f2\b0 \cf6  PayRate, 
+\f3\b \cf7 float
+\f2\b0 \cf6  HoursWorked, 
+\f3\b \cf7 float
+\f2\b0 \cf6  VacationHoursUsed, 
+\f3\b \cf7 float
+\f2\b0 \cf6  OverTimeHoursWorked)
+\f1 \cf0 \
+
+\f2 \cf6     \{
+\f1 \cf0 \
+
+\f2 \cf6     
+\f3\b \cf7 float
+\f2\b0 \cf6  FederalTaxCalc;
+\f1 \cf0 \
+
+\f2 \cf6     FederalTaxCalc = ((PayRate*(HoursWorked+VacationHoursUsed)) + (PayRate*\cf8 1.5\cf6 *OverTimeHoursWorked))*\cf8 0.10\cf6 ;
+\f1 \cf0 \
+
+\f2 \cf6     
+\f3\b \cf7 return
+\f2\b0 \cf6  FederalTaxCalc;
+\f1 \cf0 \
+
+\f2 \cf6     \}
+\f1 \cf0 \
+
+\f3\b \cf7 float
+\f2\b0 \cf6  PAYROLL::StateTaxCalc(
+\f3\b \cf7 float
+\f2\b0 \cf6  PayRate, 
+\f3\b \cf7 float
+\f2\b0 \cf6  HoursWorked, 
+\f3\b \cf7 float
+\f2\b0 \cf6  VacationHoursUsed, 
+\f3\b \cf7 float
+\f2\b0 \cf6  OverTimeHoursWorked)
+\f1 \cf0 \
+
+\f2 \cf6     \{
+\f1 \cf0 \
+
+\f2 \cf6     
+\f3\b \cf7 float
+\f2\b0 \cf6  StateTaxCalc;
+\f1 \cf0 \
+
+\f2 \cf6     StateTaxCalc = ((PayRate*(HoursWorked+VacationHoursUsed)) + (PayRate*\cf8 1.5\cf6 *OverTimeHoursWorked))*\cf8 0.05\cf6 ;
+\f1 \cf0 \
+
+\f2 \cf6     
+\f3\b \cf7 return
+\f2\b0 \cf6  StateTaxCalc;
+\f1 \cf0 \
+
+\f2 \cf6     \}
+\f1 \cf0 \
+
+\f3\b \cf7 float
+\f2\b0 \cf6  PAYROLL::NetPayCalc(
+\f3\b \cf7 float
+\f2\b0 \cf6  GrossPay, 
+\f3\b \cf7 float
+\f2\b0 \cf6  FederalTax, 
+\f3\b \cf7 float
+\f2\b0 \cf6  StateTax)
+\f1 \cf0 \
+
+\f2 \cf6     \{
+\f1 \cf0 \
+
+\f2 \cf6     
+\f3\b \cf7 float
+\f2\b0 \cf6  NetPayCalc;
+\f1 \cf0 \
+
+\f2 \cf6     NetPayCalc = GrossPay-FederalTax-StateTax;
+\f1 \cf0 \
+
+\f2 \cf6     
+\f3\b \cf7 return
+\f2\b0 \cf6  NetPayCalc;
+\f1 \cf0 \
+
+\f2 \cf6     \}
+\f1 \cf0 \
+\
+
+\f0\i \cf2 //Implement menu, search and display methods
+\f1\i0 \cf0 \
+
+\f3\b \cf7 void
+\f2\b0 \cf6  PayrollMainMenu ()\{
+\f1 \cf0 \
+
+\f2 \cf6     cout << \cf5 "PAYROLL MAIN MENU\\n"\cf6 ;
+\f1 \cf0 \
+
+\f2 \cf6     cout << \cf5 "1: Search by employee name\\n"\cf6 ;
+\f1 \cf0 \
+
+\f2 \cf6     cout << \cf5 "2: Search by employee ID\\n"\cf6 ;
+\f1 \cf0 \
+
+\f2 \cf6     cout << \cf5 "3: Return to Main Menu\\n"\cf6 ;
+\f1 \cf0 \
+
+\f2 \cf6     cout << \cf5 "Please make a selection.\\n"\cf6 ;
+\f1 \cf0 \
+
+\f2 \cf6     
+\f3\b \cf7 int
+\f2\b0 \cf6  MenuSelection;
+\f1 \cf0 \
+
+\f2 \cf6     cin >> MenuSelection;
+\f1 \cf0 \
+
+\f2 \cf6     
+\f1 \cf0 \
+
+\f2 \cf6     
+\f3\b \cf7 switch
+\f2\b0 \cf6 (MenuSelection)\{
+\f1 \cf0 \
+
+\f2 \cf6         
+\f3\b \cf7 case
+\f2\b0 \cf6  \cf8 1\cf6 : SearchByEmployeeName(); 
+\f3\b \cf7 break
+\f2\b0 \cf6 ;
+\f1 \cf0 \
+
+\f2 \cf6         
+\f3\b \cf7 case
+\f2\b0 \cf6  \cf8 2\cf6 : SearchByEmployeeID(); 
+\f3\b \cf7 break
+\f2\b0 \cf6 ;
+\f1 \cf0 \
+
+\f2 \cf6         
+\f3\b \cf7 case
+\f2\b0 \cf6  \cf8 3\cf6 : ReturnToMainMenu(); 
+\f3\b \cf7 break
+\f2\b0 \cf6 ;
+\f1 \cf0 \
+
+\f2 \cf6         
+\f3\b \cf7 default
+\f2\b0 \cf6 : PayrollMainMenu(); 
+\f3\b \cf7 break
+\f2\b0 \cf6 ;
+\f1 \cf0 \
+
+\f2 \cf6     \}
+\f1 \cf0 \
+
+\f2 \cf6 \};
+\f1 \cf0 \
+\
+
+\f3\b \cf7 void
+\f2\b0 \cf6  ReturnToMainMenu()\{
+\f1 \cf0 \
+
+\f2 \cf6     
+\f1 \cf0 \
+
+\f2 \cf6 \};
+\f1 \cf0 \
+\
+
+\f3\b \cf7 void
+\f2\b0 \cf6  SearchByEmployeeName()\{
+\f1 \cf0 \
+
+\f2 \cf6     ifstream readfile (\cf5 "EmployeeInfo.txt"\cf6 );
+\f1 \cf0 \
+
+\f2 \cf6     string LastNameEntry;
+\f1 \cf0 \
+
+\f2 \cf6     string LastName;
+\f1 \cf0 \
+
+\f2 \cf6     string FirstName;
+\f1 \cf0 \
+
+\f2 \cf6     string EmpID;
+\f1 \cf0 \
+
+\f2 \cf6     string Address1;
+\f1 \cf0 \
+
+\f2 \cf6     string Address2;
+\f1 \cf0 \
+
+\f2 \cf6     string Phone;
+\f1 \cf0 \
+
+\f2 \cf6     string HourRate;
+\f1 \cf0 \
+
+\f2 \cf6     string PayStart;
+\f1 \cf0 \
+
+\f2 \cf6     
+\f3\b \cf7 float
+\f2\b0 \cf6  HourlyRate;
+\f1 \cf0 \
+
+\f2 \cf6     string PayEnd;
+\f1 \cf0 \
+
+\f2 \cf6     
+\f3\b \cf7 float
+\f2\b0 \cf6  RegularHours;
+\f1 \cf0 \
+
+\f2 \cf6     
+\f3\b \cf7 float
+\f2\b0 \cf6  Overtime;
+\f1 \cf0 \
+
+\f2 \cf6     
+\f3\b \cf7 float
+\f2\b0 \cf6  Vacation;
+\f1 \cf0 \
+
+\f2 \cf6     
+\f1 \cf0 \
+
+\f2 \cf6     cout << \cf5 "Enter employee's last name.\\n"\cf6 ;
+\f1 \cf0 \
+
+\f2 \cf6     cin >> LastNameEntry;
+\f1 \cf0 \
+
+\f2 \cf6     cout << \cf5 "Enter pay start date.\\n"\cf6 ;
+\f1 \cf0 \
+
+\f2 \cf6     cin >> PayStart;
+\f1 \cf0 \
+
+\f2 \cf6     cout << \cf5 "Enter pay end date.\\n"\cf6 ;
+\f1 \cf0 \
+
+\f2 \cf6     cin >> PayEnd;
+\f1 \cf0 \
+
+\f2 \cf6     cout << \cf5 "Enter number of regular hours worked.\\n"\cf6 ;
+\f1 \cf0 \
+
+\f2 \cf6     cin >> RegularHours;
+\f1 \cf0 \
+
+\f2 \cf6     cout << \cf5 "Enter number of overtime hours worked.\\n"\cf6 ;
+\f1 \cf0 \
+
+\f2 \cf6     cin >> Overtime;
+\f1 \cf0 \
+
+\f2 \cf6     cout << \cf5 "Enter number of vacation hours used.\\n"\cf6 ;
+\f1 \cf0 \
+
+\f2 \cf6     cin >> Vacation;
+\f1 \cf0 \
+
+\f2 \cf6     
+\f1 \cf0 \
+
+\f2 \cf6     
+\f3\b \cf7 while
+\f2\b0 \cf6  (getline(readfile,LastName))\{
+\f1 \cf0 \
+
+\f2 \cf6         
+\f3\b \cf7 if
+\f2\b0 \cf6  (LastName==LastNameEntry)\{
+\f1 \cf0 \
+
+\f2 \cf6             getline(readfile,FirstName);
+\f1 \cf0 \
+
+\f2 \cf6             getline(readfile,EmpID);
+\f1 \cf0 \
+
+\f2 \cf6             getline(readfile,Address1);
+\f1 \cf0 \
+
+\f2 \cf6             getline(readfile,Address2);
+\f1 \cf0 \
+
+\f2 \cf6             getline(readfile,Phone);
+\f1 \cf0 \
+
+\f2 \cf6             getline(readfile,HourRate);
+\f1 \cf0 \
+
+\f2 \cf6             istringstream(HourRate) >> HourlyRate;
+\f1 \cf0 \
+
+\f2 \cf6             
+\f1 \cf0 \
+
+\f2 \cf6             cout << \cf5 "Please make a selection\\n"\cf6 ;
+\f1 \cf0 \
+
+\f2 \cf6             cout << \cf5 "1. Display employee payroll information\\n"\cf6 ;
+\f1 \cf0 \
+
+\f2 \cf6             cout << \cf5 "2. Print employee paystub\\n"\cf6 ;
+\f1 \cf0 \
+
+\f2 \cf6             
+\f3\b \cf7 int
+\f2\b0 \cf6  MenuSelection;
+\f1 \cf0 \
+
+\f2 \cf6             cin >> MenuSelection;
+\f1 \cf0 \
+
+\f2 \cf6             
+\f3\b \cf7 switch
+\f2\b0 \cf6 (MenuSelection)\{
+\f1 \cf0 \
+
+\f2 \cf6                 
+\f3\b \cf7 case
+\f2\b0 \cf6  \cf8 1\cf6 : DisplayPayroll(PAYROLL(LastName, FirstName, EmpID, Address1, Address2, Phone, HourlyRate, PayStart, PayEnd, RegularHours, Overtime, Vacation)); 
+\f3\b \cf7 break
+\f2\b0 \cf6 ;
+\f1 \cf0 \
+
+\f2 \cf6                 
+\f3\b \cf7 case
+\f2\b0 \cf6  \cf8 2\cf6 : PrintPaystub(PAYROLL(LastName, FirstName, EmpID, Address1, Address2, Phone, HourlyRate, PayStart, PayEnd, RegularHours, Overtime, Vacation)); 
+\f3\b \cf7 break
+\f2\b0 \cf6 ;
+\f1 \cf0 \
+
+\f2 \cf6                 
+\f3\b \cf7 default
+\f2\b0 \cf6 : cout << \cf5 "Invalid Selection"\cf6 ; 
+\f3\b \cf7 break
+\f2\b0 \cf6 ;
+\f1 \cf0 \
+
+\f2 \cf6             \}
+\f1 \cf0 \
+
+\f2 \cf6         \}
+\f1 \cf0 \
+
+\f2 \cf6     \}
+\f1 \cf0 \
+
+\f2 \cf6     PayrollMainMenu();
+\f1 \cf0 \
+
+\f2 \cf6 \};
+\f1 \cf0 \
+\
+
+\f3\b \cf7 void
+\f2\b0 \cf6  SearchByEmployeeID()\{
+\f1 \cf0 \
+
+\f2 \cf6     ifstream readfile (\cf5 "EmployeeInfo.txt"\cf6 );
+\f1 \cf0 \
+
+\f2 \cf6     string IDEntry;
+\f1 \cf0 \
+
+\f2 \cf6     string LastName;
+\f1 \cf0 \
+
+\f2 \cf6     string FirstName;
+\f1 \cf0 \
+
+\f2 \cf6     string EmpID;
+\f1 \cf0 \
+
+\f2 \cf6     string Address1;
+\f1 \cf0 \
+
+\f2 \cf6     string Address2;
+\f1 \cf0 \
+
+\f2 \cf6     string Phone;
+\f1 \cf0 \
+
+\f2 \cf6     string HourRate;
+\f1 \cf0 \
+
+\f2 \cf6     string PayStart;
+\f1 \cf0 \
+
+\f2 \cf6     string PayEnd;
+\f1 \cf0 \
+
+\f2 \cf6     
+\f3\b \cf7 float
+\f2\b0 \cf6  HourlyRate;
+\f1 \cf0 \
+
+\f2 \cf6     
+\f3\b \cf7 float
+\f2\b0 \cf6  RegularHours;
+\f1 \cf0 \
+
+\f2 \cf6     
+\f3\b \cf7 float
+\f2\b0 \cf6  Overtime;
+\f1 \cf0 \
+
+\f2 \cf6     
+\f3\b \cf7 float
+\f2\b0 \cf6  Vacation;
+\f1 \cf0 \
+
+\f2 \cf6     
+\f3\b \cf7 int
+\f2\b0 \cf6  LineCounter1=\cf8 0\cf6 ;
+\f1 \cf0 \
+
+\f2 \cf6     
+\f3\b \cf7 int
+\f2\b0 \cf6  LineCounter2;
+\f1 \cf0 \
+
+\f2 \cf6     
+\f1 \cf0 \
+
+\f2 \cf6     cout << \cf5 "Enter employee's ID.\\n"\cf6 ;
+\f1 \cf0 \
+
+\f2 \cf6     cin >> IDEntry;
+\f1 \cf0 \
+
+\f2 \cf6     cout << \cf5 "Enter pay start date.\\n"\cf6 ;
+\f1 \cf0 \
+
+\f2 \cf6     cin >> PayStart;
+\f1 \cf0 \
+
+\f2 \cf6     cout << \cf5 "Enter pay end date.\\n"\cf6 ;
+\f1 \cf0 \
+
+\f2 \cf6     cin >> PayEnd;
+\f1 \cf0 \
+
+\f2 \cf6     cout << \cf5 "Enter number of regular hours worked.\\n"\cf6 ;
+\f1 \cf0 \
+
+\f2 \cf6     cin >> RegularHours;
+\f1 \cf0 \
+
+\f2 \cf6     cout << \cf5 "Enter number of overtime hours worked.\\n"\cf6 ;
+\f1 \cf0 \
+
+\f2 \cf6     cin >> Overtime;
+\f1 \cf0 \
+
+\f2 \cf6     cout << \cf5 "Enter number of vacation hours used.\\n"\cf6 ;
+\f1 \cf0 \
+
+\f2 \cf6     cin >> Vacation;
+\f1 \cf0 \
+
+\f2 \cf6     
+\f1 \cf0 \
+
+\f2 \cf6     
+\f3\b \cf7 while
+\f2\b0 \cf6  (getline(readfile,EmpID))\{
+\f1 \cf0 \
+
+\f2 \cf6         
+\f3\b \cf7 if
+\f2\b0 \cf6  (EmpID!=IDEntry)\{
+\f1 \cf0 \
+
+\f2 \cf6             LineCounter1++;
+\f1 \cf0 \
+
+\f2 \cf6         \}
+\f1 \cf0 \
+
+\f2 \cf6         
+\f3\b \cf7 else
+\f2\b0 \cf6  \{
+\f1 \cf0 \
+
+\f2 \cf6             \{
+\f1 \cf0 \
+
+\f2 \cf6                 
+\f3\b \cf7 if
+\f2\b0 \cf6  (EmpID==IDEntry)
+\f1 \cf0 \
+
+\f2 \cf6                     getline(readfile,Address1);
+\f1 \cf0 \
+
+\f2 \cf6                 getline(readfile,Address2);
+\f1 \cf0 \
+
+\f2 \cf6                 getline(readfile,Phone);
+\f1 \cf0 \
+
+\f2 \cf6                 getline(readfile,HourRate);
+\f1 \cf0 \
+
+\f2 \cf6                 istringstream(HourRate) >> HourlyRate;
+\f1 \cf0 \
+
+\f2 \cf6                 readfile.close();
+\f1 \cf0 \
+
+\f2 \cf6             \}
+\f1 \cf0 \
+
+\f2 \cf6         \}
+\f1 \cf0 \
+
+\f2 \cf6     \}
+\f1 \cf0 \
+
+\f2 \cf6     readfile.open (\cf5 "EmployeeInfo.txt"\cf6 );
+\f1 \cf0 \
+
+\f2 \cf6     
+\f3\b \cf7 for
+\f2\b0 \cf6  (LineCounter2=\cf8 1\cf6 ; LineCounter2<=(LineCounter1-\cf8 1\cf6 );LineCounter2++)\{
+\f1 \cf0 \
+
+\f2 \cf6         getline(readfile,LastName);
+\f1 \cf0 \
+
+\f2 \cf6     \}
+\f1 \cf0 \
+
+\f2 \cf6     getline(readfile,FirstName);
+\f1 \cf0 \
+
+\f2 \cf6     
+\f1 \cf0 \
+
+\f2 \cf6     cout << \cf5 "Please make a selection\\n"\cf6 ;
+\f1 \cf0 \
+
+\f2 \cf6     cout << \cf5 "1. Display employee payroll information\\n"\cf6 ;
+\f1 \cf0 \
+
+\f2 \cf6     cout << \cf5 "2. Print employee paystub\\n"\cf6 ;
+\f1 \cf0 \
+
+\f2 \cf6     
+\f3\b \cf7 int
+\f2\b0 \cf6  MenuSelection;
+\f1 \cf0 \
+
+\f2 \cf6     cin >> MenuSelection;
+\f1 \cf0 \
+
+\f2 \cf6     
+\f3\b \cf7 switch
+\f2\b0 \cf6 (MenuSelection)\{
+\f1 \cf0 \
+
+\f2 \cf6         
+\f3\b \cf7 case
+\f2\b0 \cf6  \cf8 1\cf6 : DisplayPayroll(PAYROLL(LastName, FirstName, EmpID, Address1, Address2, Phone, HourlyRate, PayStart, PayEnd, RegularHours, Overtime, Vacation)); 
+\f3\b \cf7 break
+\f2\b0 \cf6 ;
+\f1 \cf0 \
+
+\f2 \cf6         
+\f3\b \cf7 case
+\f2\b0 \cf6  \cf8 2\cf6 : PrintPaystub(PAYROLL(LastName, FirstName, EmpID, Address1, Address2, Phone, HourlyRate, PayStart, PayEnd, RegularHours, Overtime, Vacation)); 
+\f3\b \cf7 break
+\f2\b0 \cf6 ;
+\f1 \cf0 \
+
+\f2 \cf6         
+\f3\b \cf7 default
+\f2\b0 \cf6 : cout << \cf5 "Invalid Selection"\cf6 ; 
+\f3\b \cf7 break
+\f2\b0 \cf6 ;
+\f1 \cf0 \
+
+\f2 \cf6     \}
+\f1 \cf0 \
+
+\f2 \cf6     PayrollMainMenu();
+\f1 \cf0 \
+
+\f2 \cf6 \};
+\f1 \cf0 \
+\
+
+\f3\b \cf7 void
+\f2\b0 \cf6  DisplayPayroll(PAYROLL a)\{
+\f1 \cf0 \
+
+\f2 \cf6     cout << \cf5 "======================================\\n"\cf6 ;
+\f1 \cf0 \
+
+\f2 \cf6     cout << \cf5 "EMPLOYEE PAYROLL INFORMATION\\n"\cf6 ;
+\f1 \cf0 \
+
+\f2 \cf6     cout << \cf5 "======================================\\n"\cf6 ;
+\f1 \cf0 \
+
+\f2 \cf6     cout << \cf5 "Employee Name: "\cf6  <<a.get_EmployeeLastName() << \cf5 ", "\cf6  << a.get_EmployeeFirstName() << endl;
+\f1 \cf0 \
+
+\f2 \cf6     cout << \cf5 "Employee ID: "\cf6  << a.get_EmployeeID() << endl;
+\f1 \cf0 \
+
+\f2 \cf6     cout << \cf5 "======================================\\n"\cf6 ;
+\f1 \cf0 \
+
+\f2 \cf6     cout << \cf5 "Pay Period: "\cf6  << a.get_PayStartDate() << \cf5 " to "\cf6  << a.get_PayEndDate() << endl;
+\f1 \cf0 \
+
+\f2 \cf6     cout << \cf5 "======================================\\n"\cf6 ;
+\f1 \cf0 \
+
+\f2 \cf6     cout << setprecision(\cf8 2\cf6 ) << fixed;
+\f1 \cf0 \
+
+\f2 \cf6     cout << \cf5 "Pay Rate: $"\cf6  << a.get_PayRate() << \cf5 "/hour"\cf6  << endl;
+\f1 \cf0 \
+
+\f2 \cf6     cout << \cf5 "Regular Hours Worked: "\cf6  << a.get_HoursWorked() << endl;
+\f1 \cf0 \
+
+\f2 \cf6     cout << \cf5 "Overtime Hours Worked: "\cf6  << a.get_OverTimeHoursWorked() << endl;
+\f1 \cf0 \
+
+\f2 \cf6     cout << \cf5 "Vacation Hours Used: "\cf6  << a.get_VacationHoursUsed() << endl;
+\f1 \cf0 \
+
+\f2 \cf6     cout << \cf5 "======================================\\n"\cf6 ;
+\f1 \cf0 \
+
+\f2 \cf6     cout << \cf5 "Federal Tax Paid: $"\cf6  << a.get_FederalTax() << endl;
+\f1 \cf0 \
+
+\f2 \cf6     cout << \cf5 "State Tax Paid : $"\cf6  << a.get_StateTax() << endl;
+\f1 \cf0 \
+
+\f2 \cf6     cout << \cf5 "======================================\\n"\cf6 ;
+\f1 \cf0 \
+
+\f2 \cf6     cout << \cf5 "Gross Pay: $"\cf6  << a.get_GrossPay() << endl;
+\f1 \cf0 \
+
+\f2 \cf6     cout << \cf5 "Net Pay: $"\cf6  << a.get_NetPay() << endl;
+\f1 \cf0 \
+
+\f2 \cf6     cout << \cf5 "======================================\\n"\cf6  << endl;
+\f1 \cf0 \
+
+\f2 \cf6 \}
+\f1 \cf0 \
+\
+
+\f3\b \cf7 void
+\f2\b0 \cf6  PrintPaystub(PAYROLL a)\{
+\f1 \cf0 \
+
+\f2 \cf6     cout << \cf5 "======================================\\n"\cf6 ;
+\f1 \cf0 \
+
+\f2 \cf6     cout << \cf5 "EMPLOYEE PAYSTUB\\n"\cf6 ;
+\f1 \cf0 \
+
+\f2 \cf6     cout << \cf5 "======================================\\n"\cf6 ;
+\f1 \cf0 \
+
+\f2 \cf6     cout << \cf5 "Name: "\cf6  << a.get_EmployeeFirstName() << \cf5 " "\cf6  << a.get_EmployeeLastName() << endl;
+\f1 \cf0 \
+
+\f2 \cf6     cout << \cf5 "======================================\\n"\cf6 ;
+\f1 \cf0 \
+
+\f2 \cf6     cout << \cf5 "Address: "\cf6  << a.get_Address1() << endl;
+\f1 \cf0 \
+
+\f2 \cf6     cout << \cf5 "         "\cf6  << a.get_Address2() << endl;
+\f1 \cf0 \
+
+\f2 \cf6     cout << \cf5 "Phone Number: "\cf6  << a.get_Phone() << endl;
+\f1 \cf0 \
+
+\f2 \cf6     cout << \cf5 "======================================\\n"\cf6 ;
+\f1 \cf0 \
+
+\f2 \cf6     cout << \cf5 "Employee ID: "\cf6  << a.get_EmployeeID() << endl;
+\f1 \cf0 \
+
+\f2 \cf6     cout << \cf5 "======================================\\n"\cf6 ;
+\f1 \cf0 \
+
+\f2 \cf6     cout << \cf5 "Pay Period: "\cf6  << a.get_PayStartDate() << \cf5 " to "\cf6  << a.get_PayEndDate() << endl;
+\f1 \cf0 \
+
+\f2 \cf6     cout << \cf5 "======================================\\n"\cf6 ;
+\f1 \cf0 \
+
+\f2 \cf6     cout << setprecision(\cf8 2\cf6 ) << fixed;
+\f1 \cf0 \
+
+\f2 \cf6     cout << \cf5 "Pay Rate: "\cf6  << a.get_PayRate() << \cf5 "/hour"\cf6  << endl;
+\f1 \cf0 \
+
+\f2 \cf6     cout << \cf5 "Regular Hours Worked: "\cf6  << a.get_HoursWorked() << endl;
+\f1 \cf0 \
+
+\f2 \cf6     cout << \cf5 "Overtime Hours Worked: "\cf6  << a.get_OverTimeHoursWorked() << endl;
+\f1 \cf0 \
+
+\f2 \cf6     cout << \cf5 "Vacation Hours Used: "\cf6  << a.get_VacationHoursUsed() << endl;
+\f1 \cf0 \
+
+\f2 \cf6     cout << \cf5 "======================================\\n"\cf6 ;
+\f1 \cf0 \
+
+\f2 \cf6     cout << \cf5 "Federal Tax Paid: "\cf6  << a.get_FederalTax() << endl;
+\f1 \cf0 \
+
+\f2 \cf6     cout << \cf5 "State Tax Paid : "\cf6  << a.get_StateTax() << endl;
+\f1 \cf0 \
+
+\f2 \cf6     cout << \cf5 "======================================\\n"\cf6 ;
+\f1 \cf0 \
+
+\f2 \cf6     cout << \cf5 "Gross Pay: "\cf6  << a.get_GrossPay() << endl;
+\f1 \cf0 \
+
+\f2 \cf6     cout << \cf5 "Net Pay: "\cf6  << a.get_NetPay() << endl;
+\f1 \cf0 \
+
+\f2 \cf6     cout << \cf5 "======================================\\n"\cf6  << endl;
+\f1 \cf0 \
+
+\f2 \cf6 \}
+\f1 \cf0 \
+}
